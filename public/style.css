@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #f9fafb;
+  background: #0b1120;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background: #111827;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid #273449;
+  background: #111827;
+}
+
+.brand-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #6366f1, #06b6d4);
+}
+
+.brand {
+  flex: 1;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.brand p {
+  margin: 4px 0 0;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #34d399;
+  margin-right: 5px;
+}
+
+.secondary {
+  padding: 9px 12px;
+  border: 1px solid #374151;
+  border-radius: 10px;
+  background: #1f2937;
+  color: white;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  padding: 22px 16px 160px;
+}
+
+.welcome {
+  text-align: center;
+  max-width: 600px;
+  margin: 40px auto 30px;
+}
+
+.hero-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 24px;
+  background: #312e81;
+  font-size: 35px;
+}
+
+.welcome h2 {
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.welcome p {
+  color: #9ca3af;
+  line-height: 1.7;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.suggestions button {
+  color: #e5e7eb;
+  background: #1f2937;
+  border: 1px solid #374151;
+  padding: 10px 14px;
+  border-radius: 14px;
+}
+
+.suggestions button:hover,
+.secondary:hover {
+  background: #374151;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 760px;
+  margin: auto;
+}
+
+.message {
+  max-width: 90%;
+  padding: 14px 16px;
+  border-radius: 17px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: #4338ca;
+  border-bottom-right-radius: 5px;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-bottom-left-radius: 5px;
+}
+
+.composer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  padding: 12px 16px 8px;
+  background: #111827;
+  border-top: 1px solid #273449;
+}
+
+.composer form {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  max-width: 760px;
+  margin: auto;
+  padding: 8px;
+  border: 1px solid #374151;
+  border-radius: 17px;
+  background: #1f2937;
+}
+
+textarea {
+  flex: 1;
+  min-width: 0;
+  max-height: 140px;
+  resize: vertical;
+  padding: 10px;
+  color: white;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+textarea::placeholder {
+  color: #9ca3af;
+}
+
+#sendButton {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 12px;
+  background: #6366f1;
+  color: white;
+  font-weight: 700;
+}
+
+#sendButton:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.footer-note {
+  margin: 8px 0 0;
+  text-align: center;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.history-panel {
+  max-width: 760px;
+  margin: 20px auto;
+}
+
+.history-panel h2 {
+  font-size: 20px;
+}
+
+.history-item {
+  padding: 12px;
+  margin: 10px 0;
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  overflow-wrap: anywhere;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .app {
+    min-height: 100vh;
+    border-left: 1px solid #273449;
+    border-right: 1px solid #273449;
+  }
+
+  main {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .composer {
+    left: 50%;
+    right: auto;
+    width: 100%;
+    max-width: 1000px;
+    transform: translateX(-50%);
+  }
+}￼Enter
