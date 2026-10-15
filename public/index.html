@@ -1,0 +1,83 @@
+<!DO<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+
+  <title>Vinay Bot AI</title>
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand-icon">V</div>
+
+      <div class="brand">
+        <h1>Vinay Bot</h1>
+        <p><span class="dot"></span> AI Assistant</p>
+      </div>
+
+      <button id="historyButton" class="secondary">
+        History
+      </button>
+    </header>
+
+    <main>
+      <section class="welcome" id="welcome">
+        <div class="hero-icon">✦</div>
+
+        <h2>नमस्ते! मैं Vinay Bot हूँ।</h2>
+
+        <p>
+          मुझसे कुछ भी पूछिए या अपनी जानकारी के बारे में सवाल कीजिए।
+        </p>
+
+        <div class="suggestions">
+          <button data-question="तुम क्या कर सकते हो?">
+            तुम क्या कर सकते हो?
+          </button>
+
+          <button data-question="आर्टिफिशियल इंटेलिजेंस क्या है?">
+            AI क्या है?
+          </button>
+
+          <button data-question="मुझे एक मोटिवेशनल सलाह दो।">
+            मोटिवेशन
+          </button>
+        </div>
+      </section>
+
+      <section id="messages" class="messages"></section>
+
+      <section id="historyPanel" class="history-panel hidden">
+        <h2>पिछली बातचीत</h2>
+        <div id="historyList"></div>
+      </section>
+    </main>
+
+    <footer class="composer">
+      <form id="chatForm">
+        <textarea
+          id="messageInput"
+          placeholder="यहाँ अपना सवाल लिखें..."
+          rows="1"
+          maxlength="4000"
+          required
+        ></textarea>
+
+        <button id="sendButton" type="submit">
+          भेजें ↑
+        </button>
+      </form>
+
+      <p class="footer-note">
+        Vinay Bot AI · जवाबों की सटीकता जाँचें
+      </p>
+    </footer>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>￼Enter
